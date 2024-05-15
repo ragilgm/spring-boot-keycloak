@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "142c4956-de2a-41a4-be30-cc450d218d9f",
+		"name": "keycloak-practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29016835"
+	},
+	"item": [
+		{
+			"name": "keycloak get token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "myclient",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "testdong12",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testdong12",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "RayXdy3yMcFcnIIerlEJkmgRfsVmHRuG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/myrealm/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"myrealm",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user or admin api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJlbmMiOiJBMTI4R0NNIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.V8opcuPdIuvlIpKU0WGBLQWsZCwVYOM0LyoDGuvdZWo-nICEnbUQvtWbT7wEJVIekg-g1cHl7w_dj9SpTa36oVrTUObeBszD1HLLIv6wHGRTP8a7ffqSDr7utVzESnlxl7q3O0xCCSFlfXhIH0I-wjq9D20LuIAd7C5-NCjCknw6zkBQiSh990kH3twVSGJu00jG8-xPy47ZTU1W3uOl8TEIrrgpODRJFnyx7f1NghYYYQLqSkcRB_NKstMSYKNyx5q5yaavHj1cLCDqi24tlUbXg3wtHivxkLB761NVkjhE4e_I83krRaNJGd1lxb3oVYIpw4FZDRBEzoZVxyKm1Q.cTvBZoDnhx4aTMLt.0w5dlYPGkaRf74n82E_tOeDlmEBKh51SEhS5hRtAPP_Ea5Y6RpykLkPJocMiCgqOhjEw1Xv9ugkC2cxRIGAMES7pqhrJbH8O4RD4GCLL6KIP3YOP2-V8T3ublYU6VioVwjj_rxyP5bBhjbJdcAARJkserMuIWkbyNCFFXX2zwgrWIS75iIxgf_jrXQ0fqCeIBuU6j-fpM9qNYMg5HsobWbFQLGWIzLTVNzWwf5aerQ7MAYt0WtmZmP9BGdfKRudNUqcFKfIcyjEcduTrZP4tUcYslLqlQyBPqoHTaixnxeOFFCsvbtAdI_O8rca-v61zvzJADiw5jIG3fhyaF1LCxrfYeyIcLJfVqAmDGpOFh2GhtK4bBaKUhPzT7XLeXUWyclurWm-8FHdUoeH3Q9mYZZyhqCRcn69K2RmeDDkqMTpykSm9B2ECOYOJn67oellPL18oz5Lrmhu56IN_x_nhW8XoUYlelzcgjUnDOcJ9AtQ09cMNmF_lC3Jao5uN6-nJwlyFcxItcErQM-Ceq60fNyxSctTtIrDidNSQwcHhYPW0u9DvAcj-2IggxquGAwdsud6hnCcun5kFV01mqwlcZlk4ZMO-Wn_gPmvVO1sXeJtstisKUUDwVPqxd8q-2olIeImn3XtSEKiEv13JnuDXjJtl7ZwAhUbs9WhSnuOfixWuOBHy_gZKft7nARk0TtzeWMTH9siyvdcC6fpXw25p4HENzk3ZTf17cv4wrK5qXDAKLi-36AKO6hz6sTj_FilnojgQBsqEZz-zHkRgB091Dg5fv3BYOrdkP2-btv5cy_X_KlKAYBTSJmfQlQwDQiKXslzaI9Y5zLHizdkjmgJAH846YfV2kExEbrSUMv734S2M7vTDJo9tQ4zpF75mzjPrkDKufFkVyzBZYeU2NS32_bHv0YCgYM2uppv5dJqzP5KA_3uf0A-eSR_jr4Y9MNWebSJ9mVHPwhYDoU8bgUNc_gplgt_7fkyxcGkafYd9lTdXoh5gfuioBJdI5dnPNm9EjsodNts6Nl2XD430vYDqW15VCS6iS_ZFEHZXrsKxSjvhPFN1VLjLO7E2CmpZjBHU5XU55pg94m0rPH3ejGGHkC7dMsB1ck-ETmkLMOU_wm3wRffknKOD66h9tAZhOUhuyYu05x3l77tl4INe9Z4-_ZjuC1GwVtYRV_pt9l2sL6gww1ctbNedqJKqSRWGedVIdx3s83THcBT7YKZNm-ucfFkCyvj_7RlQTTOgrY-6cFOWHy8SYB7CwS_QmIWOo-Y0aCgxUgkGnsrg_MrknNU1-TKVq8LrFoqN47Z82BvMoo0R3aLWX2tupDsty2paahYg3yt-XL3V38iyAkWHkVDVjdrkZ9Sigy8d9OGkx-pt4inAVzqHp1DQMOIEEohp9lx50vQ8zjip3FjmFRNPFTdV6ZJHp-5RYIruWnkSv-djwugsutRNJw-W4xCMrzCaAWT88eDl6WGcEpPQ2ZOpD9F6iBkqDZ3Oa1six01rgfM8FMTb_TIO46iyYaCQ0c-Zc0fzXlwHKvFWbOlxdUneRi6bwtlEMrKH_QfgmuV2keD3gTORQwFfz8G1LCpSrrn-RJE7mIAzBgSw7fb0s-5mTqJJxG3Z9OmkxhBIkJ2DVYeXAyq_axMSXoVuIjRRLa00SEJI76hgG3zEH9l4fH6JODvnISCnixbcd-XN1CyKSWbmjkg6JhNGYQvyz2CI2uZ69MMkDYvPb1FstMQmsHc3GtVpyBAoFqR9ySknmbhPRULuLop4w-u3FBLNnNOyk60X.nnWeHIlJ0VKYkGSG07mA4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testdong17\",\r\n  \"enabled\": true,\r\n  \"firstName\": \"testdong17\",\r\n  \"lastName\": \"testdong17\",\r\n  \"password\":\"testdong17\",\r\n  \"email\":\"testdong17@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testdong17\",\r\n  \"password\":\"testdong17\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh actuator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/actuator/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
