@@ -1,4 +1,4 @@
-this is sample integration spring boot with keycloak
+this is sample integration spring boot with keycloak and using JWE for token encryption
 
 currently i work with version 24.0.4
 java version 17
